@@ -8,8 +8,6 @@
 import Foundation
 import PokemonAPI
 
-
-
 func pokemonServiceCall(num:Int, completion: @escaping (Result<PKMPokemon?, Error>) -> Void) {
     
     PokemonAPI().pokemonService.fetchPokemon(num) { result in
@@ -19,6 +17,7 @@ func pokemonServiceCall(num:Int, completion: @escaping (Result<PKMPokemon?, Erro
             completion(.success(pokemon))
         case .failure(let error):
             print(error.localizedDescription)
+            completion(.failure(error))
         }
     }
 }

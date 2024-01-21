@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         //setup this instance (window) of the application and make it visible
         window = UIWindow(windowScene: scene)
-        window?.rootViewController = PokemonTableViewViewController() //set up a VC; will manage view hierarchy and respond to user's interactions
+        window?.rootViewController = PokemonViewController() //set up a VC; will manage view hierarchy and respond to user's interactions
         window?.makeKeyAndVisible()
     }
 
